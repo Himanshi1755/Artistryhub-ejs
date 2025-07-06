@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery</title>
+  <%- include("_bootstrap.ejs") %>
+    <style>
+      .image-card {
+        position: relative;
+        border: 2px solid #ddd;
+        border-radius: 5px;
+      }
+
+      .image-card img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+
+      .overlay-text {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .image-card:hover .overlay-text {
+        opacity: 1;
+      }
+    </style>
+</head>
+
+<body>
+  <%- include("_header.ejs") %>
+
+    <div class="container mt-4">
+      <div class="row">
+
+        <div class="col-md-6 mb-3">
+          <a href="/gallery/painting">
+            <div class="image-card">
+              <img src="/images/painting.jpg" alt="Painting">
+              <div class="overlay-text">Category: Painting</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <div class="image-card">
+            <a href="/gallery/sketch">
+              <img src="/images/sketch.jpg" alt="Sketch">
+              <div class="overlay-text">Category: Sketch</div>
+          </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <div class="image-card">
+            <a href="/gallery/artCraft">
+              <img src="/images/craft.jpg" alt="Sketch">
+              <div class="overlay-text">Category: Art & Craft</div>
+          </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <div class="image-card">
+            <a href="/gallery/Photography">
+              <img src="/images/photography.jpg" alt="Sketch">
+              <div class="overlay-text">Category: Photography</div>
+          </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <div class="image-card">
+            <a href="/gallery/mixedMedia">
+              <img src="/images/mixedMedia.jpg" alt="Sketch">
+              <div class="overlay-text">Category: Mixed Media</div>
+          </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <div class="image-card">
+            <a href="/gallery/pottery">
+              <img src="/images/pottery.jpg" alt="Sketch">
+              <div class="overlay-text">Category: Pottery</div>
+          </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    
+</body>
+
+</html>

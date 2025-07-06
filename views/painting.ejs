@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <%- include("_bootstrap.ejs")%>
+    <style>
+      .para2 {
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #555;
+      }
+
+      .para1 {
+        margin-bottom: 12px;
+        font-size: 14px;
+        color: #555;
+      }
+      .text-center{
+        margin-top: 45px;
+      }
+
+
+      .art-btn {
+        background-color: #dce2f0;
+        color: #4a0d67;
+        border: none;
+        margin-top: auto;
+        padding: 8px 16px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .art-btn:hover {
+        background-color: #c697eb;
+      }
+    </style>
+</head>
+
+<body>
+  <%-include("_header.ejs")%>
+    <div class="container mt-3">
+      <h2 class="text-center mb-4" style="color: #380748;">Explore More Paintings</h2>
+      <div class="row">
+        <%for(let painting of paintings){%>
+          <div class="col-md-3 p-3">
+            <div class="d-flex justify-content-center flex-column align-items-center p-3" style="height: 400px;">
+              <img src="<%=painting.image%>" class="mb-3" width="100%" height="250px; object-fit:cover;" />
+              <p class="para2">
+                <%=painting.title%>
+              </p>
+              <p class="para1">
+                <%=painting.price%> Rs.
+              </p>
+              <a href="/painting/<%=painting.id%>" class="btn art-btn" style="width:100%">View Details</a>
+            </div>
+          </div>
+          <%}%>
+      </div>
+    </div>
+</body>
+
+</html>

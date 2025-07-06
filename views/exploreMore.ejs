@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include("_bootstrap.ejs") %>
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .art-container {
+      margin-top: 40px;
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .art-image {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    .art-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    .art-value {
+      color: #333;
+    }
+    .badge {
+      font-size: 0.85rem;
+    }
+    .custom-btn {
+      background-color: #8E44AD;
+      border: none;
+      font-weight: 600;
+       padding: 10px 20px;
+  border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <%- include("_header.ejs") %>
+  <div class="container art-container">
+    <div class="row g-4 align-items-center">
+      
+      <div class="col-md-4">
+        <img src="<%= painting.thumbnail %>" alt="<%= painting.title %>" class="art-image" height="450px">
+      </div>
+
+     
+      <div class="col-md-6">
+        <h2 class="art-title"><%= painting.title %> <span class="text-muted">by <%= painting.artist %></span></h2>
+        <p class="text-muted mt-2"><%= painting.description %></p>
+
+        <div class="mt-4">
+          <p><span style="font-weight: 500; color: #555;">Year:</span> <span class="art-value"><%= painting.year %></span></p>
+          <p><span style="font-weight: 500; color: #555;">Style:</span> <span class="art-value"><%= painting.style %></span></p>
+          <p><span style="font-weight: 500; color: #555;">Medium:</span> <span class="art-value"><%= painting.medium %></span></p>
+          <p><span style="font-weight: 500; color: #555;">Dimensions:</span> <span class="art-value"><%= painting.dimensions %></span></p>
+          <p><span style="font-weight: 500; color: #555;">Location:</span> <span class="art-value"><%= painting.location %></span></p>
+          <p><span style="font-weight: 500; color: #555;">Availability:</span> <span class="art-value"><%= painting.availability %></span></p>
+          <p><span style="font-weight: 500; color: #555;">Rating:</span> <span class="text-warning"><%= painting.rating %>/5</span></p>
+          <p><span style="font-weight: 500; color: #555;">Price:</span> <span class="text-success fw-bold fs-5"><%= painting.price %> Rs.</span></p>
+        </div>
+
+        <div class="mt-2 mb-3">
+          <% painting.tags.forEach(tag => { %>
+            <span class="badge bg-secondary me-1"><%= tag %></span>
+          <% }) %>
+        </div>
+
+        <a href="/painting/<%= painting.id %>" class="btn custom-btn w-100" style="background-color:#8E44AD;">Purchase</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+

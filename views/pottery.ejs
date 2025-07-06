@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bootstrap Example</title>
+    <%- include("_bootstrap.ejs")%>
+</head>
+
+<body>
+    <%-include("_header.ejs")%>
+    <div class="container mt-3">
+        <div class="row">
+            <%for(let pItems of pottery){%>
+              <div class="col-md-3 p-2">
+                <div class="d-flex justify-content-center flex-column align-items-center" style="box-shadow: 10px 10px 10px grey; height: 350px;">
+                    <img src="<%=pItems.image%>" width="100%" style="height:250px"/>
+                    <p><%=pItems.title%></p>
+                    <p><b class="text-success"><%=pItems.price%> Rs.</b></p>
+                    <a href="/pottery/<%=pItems.id%>" class="btn btn-warning" style="width:100%">View more</a>
+                </div>
+              </div>
+            <%}%>
+        </div>
+    </div>
+</body>
+
+</html>
