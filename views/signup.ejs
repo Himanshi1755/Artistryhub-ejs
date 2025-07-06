@@ -15,7 +15,7 @@
     }
 
     body {
-      /* background: linear-gradient(239deg, #db08ef, #69d2f2); */
+      background: #f9f5fb;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -23,78 +23,85 @@
     }
 
     .signup-container {
-      background-color: #f3e8ff;
-      border: 2px solid #d8b4fe;
-      border-radius: 12px;
-      padding: 30px;
+      background-color: #fff;
+      border: 1.8px solid #d8b4fe;
+      border-radius: 10px;
+      padding: 25px 20px; 
       width: 100%;
-      max-width: 450px;
-      box-shadow: 0 8px 16px rgba(123, 31, 162, 0.1);
+      max-width: 400px; 
+      box-shadow: 0 6px 16px rgba(106, 13, 173, 0.08);
+    }
+     .signup-container p {
+      text-align: center;
+      color: #7e5ca8;
+      font-size: 0.85rem;
+      margin-bottom: 20px;
     }
 
     h2 {
       text-align: center;
-      margin-bottom: 25px;
+      margin-bottom: 18px;
       color: #6a0dad;
+      font-weight: 600;
+      font-size: 1.4rem;
     }
 
-    /* .input-box {
-      position: relative;
-      margin-bottom: 20px;
-    } */
+    .input-box {
+      margin-bottom: 12px;
+    }
 
     .input-box input {
       width: 100%;
-      padding: 12px 40px 12px 15px;
-      margin-bottom: 11px;
+      padding: 10px 12px;
       border-radius: 6px;
-      border: 2px solid #d6b9ff;
+      border: 1.5px solid #d6b9ff;
       background-color: #ffffff;
       color: #333;
-      font-size: 15px;
+      font-size: 0.9rem;
       outline: none;
+      transition: border-color 0.3s;
     }
 
-    .input-box input::placeholder {
-      color: #999;
+    .input-box input:focus {
+      border-color: #a855f7;
+      box-shadow: 0 0 4px rgba(168, 85, 247, 0.25);
     }
-
 
     .btn {
       width: 100%;
-      padding: 12px;
-      margin-top: 10px;
+      padding: 10px;
+      margin-top: 8px;
       border: none;
-      background-color: #a855f7;
-      color: white;
-      font-weight: bold;
+      background-color: #d9a3ff;
+      color: #4a0d67;
+      font-weight: 600;
       border-radius: 6px;
       cursor: pointer;
       transition: background 0.3s ease;
+      font-size: 0.95rem;
     }
 
     .btn:hover {
-      background-color: #9333ea;
+      background-color: #b77ddc;
+      color: white;
     }
 
     .login {
       text-align: center;
-      margin-top: 18px;
-      font-size: 14px;
+      margin-top: 14px;
+      font-size: 0.85rem;
       color: #444;
     }
 
     .login a {
       color: #6a0dad;
-      font-weight: 600;
+      font-weight: 500;
       text-decoration: none;
     }
 
     .login a:hover {
       text-decoration: underline;
     }
-   
-
   </style>
 </head>
 
@@ -102,21 +109,22 @@
   <div class="signup-container">
     <form action="/user/signup" method="post">
       <h2>Create Account</h2>
+      <p>Join ArtistryHub and explore a world of creativity</p>
 
       <div class="input-box">
         <input type="text" name="name" placeholder="Username" required />
-        </div>
-        <!-- <i class='bx bx-user'></i> -->
-         <div class="input-box">
+      </div>
+
+      <div class="input-box">
         <input type="email" name="email" placeholder="Email" required />
-        </div>
-        <!-- <i class='bx bx-envelope'></i> -->
-         <div class="input-box">
+      </div>
+
+      <div class="input-box">
         <input type="password" name="password" placeholder="Password" required />
-        </div>
-        <!-- <i class='bx bx-lock-alt'></i> -->
-         <div class="input-box">
-        <input type="tel" name="contact" placeholder="contact" required />
+      </div>
+
+      <div class="input-box">
+        <input type="tel" name="contact" placeholder="Contact" required />
       </div>
 
       <button type="submit" class="btn">Sign Up</button>

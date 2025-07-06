@@ -2,58 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Footer Demo</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Footer | ArtistryHub</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <style>
     .footer {
-      background-color: #2e083b;
-      color: #e0d9f1;
-      padding: 20px 0 15px;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      font-weight: 500;
+      background: #4a0d67; 
+      color: #e9d8f7;
+      padding: 25px 0 15px;
+      font-family: 'Poppins', sans-serif;
       font-size: 0.9rem;
-      letter-spacing: 0.03em;
-      text-align: center;
     }
-    .footer p {
-      margin: 0;
+    .footer h5 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 10px;
     }
-    .footer .social-icons {
-      margin: 8px 0;
-    }
-    .footer .icon {
-      color: #b48abd;
-      font-size: 1.3rem;
-      margin: 0 10px;
-      transition: color 0.3s ease;
-      text-decoration: none;
-    }
-    .footer .icon:hover {
+    .footer a {
       color: #d9a3ff;
+      text-decoration: none;
+      font-weight: 400;
     }
-    .footer .made-in-india {
-      font-style: italic;
-      color: #b48abd;
+    .footer a:hover {
+      text-decoration: underline;
+      color: #ffffff;
+    }
+    .footer .social-icons a {
+      color: #d9a3ff;
+      font-size: 1.4rem;
+      margin-right: 12px;
+      transition: color 0.3s ease;
+    }
+    .footer .social-icons a:hover {
+      color: #ffffff;
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.2);
+      margin-top: 15px;
+      padding-top: 10px;
+      font-size: 0.85rem;
+      text-align: center;
+      color: #cbb5e9;
     }
   </style>
 </head>
 <body>
 
-  <!-- Your page content here -->
+
+  <div class="container py-5">
+    <h1 class="text-center">Welcome to ArtistryHub</h1>
+    <p class="text-center">Explore art & creativity</p>
+  </div>
 
   <footer class="footer">
     <div class="container">
-      <p class="mb-1">&copy; 2025 YourArtStore. All rights reserved.</p>
-      <p class="mb-2">Bringing art and culture closer to you.</p>
-      <div class="social-icons">
-        <a href="#" aria-label="Facebook" class="icon"><i class="bi bi-facebook"></i></a>
-        <a href="#" aria-label="Instagram" class="icon"><i class="bi bi-instagram"></i></a>
-        <a href="#" aria-label="Twitter" class="icon"><i class="bi bi-twitter"></i></a>
-        <a href="#" aria-label="Pinterest" class="icon"><i class="bi bi-pinterest"></i></a>
+      <div class="row text-center text-md-start">
+        <div class="col-md-4 mb-3">
+          <h5>About ArtistryHub</h5>
+          <p style="margin-bottom:8px;">Connecting artists and art lovers worldwide through creativity and passion.</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h5>Quick Links</h5>
+          <a href="/" class="d-block">Home</a>
+          <a href="/about" class="d-block">About</a>
+          <a href="/gallery" class="d-block">Gallery</a>
+          <a href="/contact" class="d-block">Contact</a>
+        </div>
+        <div class="col-md-4 mb-3 text-center">
+          <h5>Follow Us</h5>
+          <div class="social-icons mb-2">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+          </div>
+          <p class="small">Made with <span style="color:#e25555;">♥</span> in India</p>
+        </div>
       </div>
-      <p class="made-in-india">Made with <span style="color: #e25555;">&#10084;</span> in India</p>
+      <div class="footer-bottom">
+        &copy; 2025 ArtistryHub. All rights reserved.
+      </div>
     </div>
   </footer>
 
